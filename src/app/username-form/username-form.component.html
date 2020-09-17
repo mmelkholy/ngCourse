@@ -1,0 +1,22 @@
+  <div class="form-group">
+    <label for="exampleInputEmail1">Username</label>
+    <input
+      type="email"
+      class="form-control"
+      placeholder="Enter email"
+      [(ngModel)]="username"
+    >
+
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+
+    <p>{{ username }}</p>
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn-primary"
+    [disabled]="!username"
+    (click)="onUsernameSubmit()"
+  >
+    Submit
+  </button>

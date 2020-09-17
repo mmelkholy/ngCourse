@@ -1,0 +1,18 @@
+<button class="btn btn-primary"
+  (click)="onToggleDetails()"
+  [innerText]="displayIt ? 'Hide Details' : 'Show Details'"
+></button>
+
+<p
+  *ngIf="displayIt"
+  [innerText]="details"
+></p>
+
+<ul>
+  <li
+    *ngFor="let entry of log"
+    [ngClass]="{'blueish': entry['index'] >= 4}"
+  >
+  {{entry['index']}}, {{ entry['time'] }}
+</li>
+</ul>
